@@ -1,0 +1,19 @@
+run-python-file copy-mem-spaces.py
+
+run-python-file configure-caches.py
+
+$loop = 0
+while $loop < 8 {
+    $thread = 0
+    while $thread < 4 {
+        ("cpu"+ $loop + "_" + $thread)->instruction-fetch-mode = instruction-cache-access-trace
+        ("cpu"+ $loop + "_" + $thread)->physical_memory = ("cpu_mem" + $loop)
+        $thread += 1
+    }
+    ("cpu_mem" + $loop)->timing_model = ("l1cache" + $loop)
+    $loop += 1
+}
+
+istc-disable
+dstc-disable
+

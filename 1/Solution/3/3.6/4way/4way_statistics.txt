@@ -1,0 +1,79 @@
+Cache statistics: ic
+-----------------
+    Total number of transactions:     122986578
+
+         Device data reads (DMA):             0
+        Device data writes (DMA):             0
+
+          Uncacheable data reads:             0
+         Uncacheable data writes:             0
+ Uncacheable instruction fetches:             0
+
+          Data read transactions:             0
+                Data read misses:             0
+
+  Instruction fetch transactions:     122986578
+        Instruction fetch misses:     120223046
+     Instruction fetch hit ratio:          2.25%
+
+         Data write transactions:             0
+               Data write misses:             0
+
+          Copy back transactions:             0
+
+simics> dc.statistics 
+
+Cache statistics: dc
+-----------------
+    Total number of transactions:     186813243
+
+         Device data reads (DMA):             0
+        Device data writes (DMA):             0
+
+          Uncacheable data reads:             0
+         Uncacheable data writes:             0
+ Uncacheable instruction fetches:             0
+
+          Data read transactions:     159180697
+                Data read misses:        793819
+             Data read hit ratio:         99.50%
+
+  Instruction fetch transactions:             0
+        Instruction fetch misses:             0
+
+         Data write transactions:      27632546
+               Data write misses:        651891
+            Data write hit ratio:         97.64%
+
+          Copy back transactions:             0
+
+               Lost Stall Cycles:        801246
+simics> lev2c.statistics 
+
+Cache statistics: lev2c
+-----------------
+    Total number of transactions:     148649411
+
+         Device data reads (DMA):             0
+        Device data writes (DMA):             0
+
+          Uncacheable data reads:             0
+         Uncacheable data writes:             0
+ Uncacheable instruction fetches:             0
+
+          Data read transactions:        793819
+                Data read misses:         27164
+             Data read hit ratio:         96.58%
+
+  Instruction fetch transactions:     120223046
+        Instruction fetch misses:         15071
+     Instruction fetch hit ratio:         99.99%
+
+         Data write transactions:      27632546
+               Data write misses:         36659
+            Data write hit ratio:         99.87%
+
+          Copy back transactions:         42342
+
+               Lost Stall Cycles:       3047170
+simics> 

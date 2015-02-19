@@ -1,0 +1,322 @@
+Cache Info: l1cache0
+-----------
+Number of cache lines : 512
+Cache line size       : 128 bytes
+Total cache size      : 64 kbytes
+Associativity         : 4
+Index                 : physical
+Tag                   : physical
+Write allocate        : no
+Write policy          : write-through
+Replacement policy    : lru
+
+Connected to CPUs     : cpu0_0 cpu0_1 cpu0_2 cpu0_3 
+Next level cache      : <the g-cache 'l2cache'>
+
+Read penalty          : 1 cycle
+Read-next penalty     : 0 cycle
+Write penalty         : 1 cycle
+Write-next penalty    : 0 cycle
+
+Snoopers              : l1cache1 l1cache2 l1cache3 l1cache4 l1cache5 l1cache6 l1cache7 
+simics> l2cache.info
+
+Cache Info: l2cache
+-----------
+Number of cache lines : 2048
+Cache line size       : 128 bytes
+Total cache size      : 256 kbytes
+Associativity         : 8
+Index                 : physical
+Tag                   : physical
+Write allocate        : yes
+Write policy          : write-back
+Replacement policy    : lru
+
+Connected to CPUs     : cpu0_0 cpu0_1 cpu0_2 cpu0_3 cpu1_0 cpu1_1 cpu1_2 cpu1_3 cpu2_0 cpu2_1 cpu2_2 cpu2_3 cpu3_0 cpu3_1 cpu3_2 cpu3_3 cpu4_0 cpu4_1 cpu4_2 cpu4_3 cpu5_0 cpu5_1 cpu5_2 cpu5_3 cpu6_0 cpu6_1 cpu6_2 cpu6_3 cpu7_0 cpu7_1 cpu7_2 cpu7_3 
+Next level cache      : <the trans-staller 'staller'>
+
+Read penalty          : 5 cycles
+Read-next penalty     : 0 cycle
+Write penalty         : 5 cycles
+Write-next penalty    : 0 cycle
+
+Higher level caches   : l1cache0 l1cache1 l1cache2 l1cache3 l1cache4 l1cache5 l1cache6 l1cache7 
+simics> 
+simics> l2cache.statistics 
+
+Cache statistics: l2cache
+-----------------
+    Total number of transactions:      21804267
+
+         Device data reads (DMA):             0
+        Device data writes (DMA):             0
+
+          Uncacheable data reads:             0
+         Uncacheable data writes:             0
+ Uncacheable instruction fetches:             0
+
+          Data read transactions:      15361822
+                Data read misses:       3340097
+             Data read hit ratio:         78.26%
+
+  Instruction fetch transactions:        819786
+        Instruction fetch misses:        200516
+     Instruction fetch hit ratio:         75.54%
+
+         Data write transactions:       5622659
+               Data write misses:        578618
+            Data write hit ratio:         89.71%
+
+          Copy back transactions:       1118310
+
+               Lost Stall Cycles:       5501975
+simics> l1cache0.statistics 
+
+Cache statistics: l1cache0
+-----------------
+    Total number of transactions:      20932982
+
+         Device data reads (DMA):             0
+        Device data writes (DMA):             0
+
+          Uncacheable data reads:             0
+         Uncacheable data writes:             0
+ Uncacheable instruction fetches:             0
+
+          Data read transactions:       9188543
+                Data read misses:       1717650
+             Data read hit ratio:         81.31%
+
+  Instruction fetch transactions:      10997073
+        Instruction fetch misses:         98799
+     Instruction fetch hit ratio:         99.10%
+
+         Data write transactions:        747366
+               Data write misses:         53840
+            Data write hit ratio:         92.80%
+
+          Copy back transactions:             0
+
+               Lost Stall Cycles:        146488
+      [MESI] Exclusive to Shared:         55518
+       [MESI] Modified to Shared:             0
+              [MESI] Invalidates:        184830
+simics> l1cache1.statistics 
+
+Cache statistics: l1cache1
+-----------------
+    Total number of transactions:      22772627
+
+         Device data reads (DMA):             0
+        Device data writes (DMA):             0
+
+          Uncacheable data reads:             0
+         Uncacheable data writes:             0
+ Uncacheable instruction fetches:             0
+
+          Data read transactions:      10186484
+                Data read misses:       1962196
+             Data read hit ratio:         80.74%
+
+  Instruction fetch transactions:      11917038
+        Instruction fetch misses:         95030
+     Instruction fetch hit ratio:         99.20%
+
+         Data write transactions:        669105
+               Data write misses:         49129
+            Data write hit ratio:         92.66%
+
+          Copy back transactions:             0
+
+               Lost Stall Cycles:        155596
+      [MESI] Exclusive to Shared:         66428
+       [MESI] Modified to Shared:             0
+              [MESI] Invalidates:        167688
+simics> l1cache2.statistics 
+
+Cache statistics: l1cache2
+-----------------
+    Total number of transactions:      21869906
+
+         Device data reads (DMA):             0
+        Device data writes (DMA):             0
+
+          Uncacheable data reads:             0
+         Uncacheable data writes:             0
+ Uncacheable instruction fetches:             0
+
+          Data read transactions:       9630259
+                Data read misses:       1894235
+             Data read hit ratio:         80.33%
+
+  Instruction fetch transactions:      11430069
+        Instruction fetch misses:        120256
+     Instruction fetch hit ratio:         98.95%
+
+         Data write transactions:        809578
+               Data write misses:        110089
+            Data write hit ratio:         86.40%
+
+          Copy back transactions:             0
+
+               Lost Stall Cycles:        159394
+      [MESI] Exclusive to Shared:         73047
+       [MESI] Modified to Shared:             0
+              [MESI] Invalidates:        169713
+simics> l1cache3.statistics 
+
+Cache statistics: l1cache3
+-----------------
+    Total number of transactions:      21338861
+
+         Device data reads (DMA):             0
+        Device data writes (DMA):             0
+
+          Uncacheable data reads:             0
+         Uncacheable data writes:             0
+ Uncacheable instruction fetches:             0
+
+          Data read transactions:       9539479
+                Data read misses:       1980591
+             Data read hit ratio:         79.24%
+
+  Instruction fetch transactions:      11139812
+        Instruction fetch misses:        104582
+     Instruction fetch hit ratio:         99.06%
+
+         Data write transactions:        659570
+               Data write misses:         51266
+            Data write hit ratio:         92.23%
+
+          Copy back transactions:             0
+
+               Lost Stall Cycles:        147771
+      [MESI] Exclusive to Shared:         50133
+       [MESI] Modified to Shared:             0
+              [MESI] Invalidates:        188006
+simics> l1cache4.statistics 
+
+Cache statistics: l1cache4
+-----------------
+    Total number of transactions:      21012967
+
+         Device data reads (DMA):             0
+        Device data writes (DMA):             0
+
+          Uncacheable data reads:             0
+         Uncacheable data writes:             0
+ Uncacheable instruction fetches:             0
+
+          Data read transactions:       9392941
+                Data read misses:       1905615
+             Data read hit ratio:         79.71%
+
+  Instruction fetch transactions:      10946984
+        Instruction fetch misses:         93909
+     Instruction fetch hit ratio:         99.14%
+
+         Data write transactions:        673042
+               Data write misses:         59912
+            Data write hit ratio:         91.10%
+
+          Copy back transactions:             0
+
+               Lost Stall Cycles:        146310
+      [MESI] Exclusive to Shared:         54528
+       [MESI] Modified to Shared:             0
+              [MESI] Invalidates:        178594
+simics> l1cache5.statistics 
+
+Cache statistics: l1cache5
+-----------------
+    Total number of transactions:      21239998
+
+         Device data reads (DMA):             0
+        Device data writes (DMA):             0
+
+          Uncacheable data reads:             0
+         Uncacheable data writes:             0
+ Uncacheable instruction fetches:             0
+
+          Data read transactions:       9498248
+                Data read misses:       1976058
+             Data read hit ratio:         79.20%
+
+  Instruction fetch transactions:      11078558
+        Instruction fetch misses:        105105
+     Instruction fetch hit ratio:         99.05%
+
+         Data write transactions:        663192
+               Data write misses:         52165
+            Data write hit ratio:         92.13%
+
+          Copy back transactions:             0
+
+               Lost Stall Cycles:        148429
+      [MESI] Exclusive to Shared:         48684
+       [MESI] Modified to Shared:             0
+              [MESI] Invalidates:        190408
+simics> l1cache6.statistics 
+
+Cache statistics: l1cache6
+-----------------
+    Total number of transactions:      21622998
+
+         Device data reads (DMA):             0
+        Device data writes (DMA):             0
+
+          Uncacheable data reads:             0
+         Uncacheable data writes:             0
+ Uncacheable instruction fetches:             0
+
+          Data read transactions:       9684200
+                Data read misses:       1967291
+             Data read hit ratio:         79.69%
+
+  Instruction fetch transactions:      11280429
+        Instruction fetch misses:        102517
+     Instruction fetch hit ratio:         99.09%
+
+         Data write transactions:        658369
+               Data write misses:         48089
+            Data write hit ratio:         92.70%
+
+          Copy back transactions:             0
+
+               Lost Stall Cycles:        148997
+      [MESI] Exclusive to Shared:         55699
+       [MESI] Modified to Shared:             0
+              [MESI] Invalidates:        180250
+simics> l1cache7.statistics 
+
+Cache statistics: l1cache7
+-----------------
+    Total number of transactions:      22360805
+
+         Device data reads (DMA):             0
+        Device data writes (DMA):             0
+
+          Uncacheable data reads:             0
+         Uncacheable data writes:             0
+ Uncacheable instruction fetches:             0
+
+          Data read transactions:       9961530
+                Data read misses:       1958186
+             Data read hit ratio:         80.34%
+
+  Instruction fetch transactions:      11656838
+        Instruction fetch misses:         99588
+     Instruction fetch hit ratio:         99.15%
+
+         Data write transactions:        742437
+               Data write misses:         61949
+            Data write hit ratio:         91.66%
+
+          Copy back transactions:             0
+
+               Lost Stall Cycles:        155360
+      [MESI] Exclusive to Shared:         53148
+       [MESI] Modified to Shared:             0
+              [MESI] Invalidates:        185477
+simics> 

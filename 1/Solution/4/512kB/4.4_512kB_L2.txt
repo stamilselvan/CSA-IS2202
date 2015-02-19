@@ -1,0 +1,27 @@
+Cache statistics: l2cache
+-----------------
+    Total number of transactions:      10843869
+
+         Device data reads (DMA):             0
+        Device data writes (DMA):             0
+
+          Uncacheable data reads:             0
+         Uncacheable data writes:             0
+ Uncacheable instruction fetches:             0
+
+          Data read transactions:       5516305
+                Data read misses:         38654
+             Data read hit ratio:         99.30%
+
+  Instruction fetch transactions:         30383
+        Instruction fetch misses:          7691
+     Instruction fetch hit ratio:         74.69%
+
+         Data write transactions:       5297181
+               Data write misses:        471481
+            Data write hit ratio:         91.10%
+
+          Copy back transactions:        491998
+
+               Lost Stall Cycles:       6253010
+simics> 

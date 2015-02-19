@@ -1,0 +1,30 @@
+Cache statistics: l1cache0
+-----------------
+    Total number of transactions:      23677366
+
+         Device data reads (DMA):             0
+        Device data writes (DMA):             0
+
+          Uncacheable data reads:             0
+         Uncacheable data writes:             0
+ Uncacheable instruction fetches:             0
+
+          Data read transactions:      10507249
+                Data read misses:       2115461
+             Data read hit ratio:         79.87%
+
+  Instruction fetch transactions:      12512554
+        Instruction fetch misses:         93618
+     Instruction fetch hit ratio:         99.25%
+
+         Data write transactions:        657563
+               Data write misses:         53977
+            Data write hit ratio:         91.79%
+
+          Copy back transactions:             0
+
+               Lost Stall Cycles:        161942
+      [MESI] Exclusive to Shared:         40655
+       [MESI] Modified to Shared:             0
+              [MESI] Invalidates:        134681
+simics> 

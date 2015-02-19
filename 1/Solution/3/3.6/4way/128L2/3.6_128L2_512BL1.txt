@@ -1,0 +1,146 @@
+Cache Info: ic
+-----------
+Number of cache lines : 16
+Cache line size       : 32 bytes
+Total cache size      : 0 kbytes
+Associativity         : 1
+Index                 : physical
+Tag                   : physical
+Write allocate        : no
+Write policy          : write-through
+Replacement policy    : lru
+
+Connected to CPUs     : cpu0_0 
+Next level cache      : <the g-cache 'lev2c'>
+
+Read penalty          : 3 cycles
+Read-next penalty     : 0 cycle
+Write penalty         : 0 cycle
+Write-next penalty    : 0 cycle
+
+simics> dc.info 
+
+Cache Info: dc
+-----------
+Number of cache lines : 16
+Cache line size       : 32 bytes
+Total cache size      : 0 kbytes
+Associativity         : 4
+Index                 : physical
+Tag                   : physical
+Write allocate        : no
+Write policy          : write-through
+Replacement policy    : lru
+
+Connected to CPUs     : cpu0_0 
+Next level cache      : <the g-cache 'lev2c'>
+
+Read penalty          : 3 cycles
+Read-next penalty     : 0 cycle
+Write penalty         : 3 cycles
+Write-next penalty    : 0 cycle
+
+simics> lev2c.info
+
+Cache Info: lev2c
+-----------
+Number of cache lines : 1024
+Cache line size       : 128 bytes
+Total cache size      : 128 kbytes
+Associativity         : 8
+Index                 : physical
+Tag                   : physical
+Write allocate        : yes
+Write policy          : write-back
+Replacement policy    : lru
+
+Connected to CPUs     : cpu0_0 
+Next level cache      : <the trans-staller 'staller'>
+
+Read penalty          : 10 cycles
+Read-next penalty     : 0 cycle
+Write penalty         : 10 cycles
+Write-next penalty    : 0 cycle
+
+simics> 
+
+Cache statistics: ic
+-----------------
+    Total number of transactions:     140472799
+
+         Device data reads (DMA):             0
+        Device data writes (DMA):             0
+
+          Uncacheable data reads:             0
+         Uncacheable data writes:             0
+ Uncacheable instruction fetches:             0
+
+          Data read transactions:             0
+                Data read misses:             0
+
+  Instruction fetch transactions:     140472799
+        Instruction fetch misses:      76966972
+     Instruction fetch hit ratio:         45.21%
+
+         Data write transactions:             0
+               Data write misses:             0
+
+          Copy back transactions:             0
+
+simics> dc.statistics 
+
+Cache statistics: dc
+-----------------
+    Total number of transactions:     107507281
+
+         Device data reads (DMA):             0
+        Device data writes (DMA):             0
+
+          Uncacheable data reads:             0
+         Uncacheable data writes:             0
+ Uncacheable instruction fetches:             0
+
+          Data read transactions:      95620434
+                Data read misses:       4683414
+             Data read hit ratio:         95.10%
+
+  Instruction fetch transactions:             0
+        Instruction fetch misses:             0
+
+         Data write transactions:      11886847
+               Data write misses:       1226683
+            Data write hit ratio:         89.68%
+
+          Copy back transactions:             0
+
+               Lost Stall Cycles:        568849
+simics> lev2c.statistics 
+
+Cache statistics: lev2c
+-----------------
+    Total number of transactions:      93537233
+
+         Device data reads (DMA):             0
+        Device data writes (DMA):             0
+
+          Uncacheable data reads:             0
+         Uncacheable data writes:             0
+ Uncacheable instruction fetches:             0
+
+          Data read transactions:       4683414
+                Data read misses:        215162
+             Data read hit ratio:         95.41%
+
+  Instruction fetch transactions:      76966972
+        Instruction fetch misses:         53102
+     Instruction fetch hit ratio:         99.93%
+
+         Data write transactions:      11886847
+               Data write misses:         26782
+            Data write hit ratio:         99.77%
+
+          Copy back transactions:         55468
+
+               Lost Stall Cycles:       1521780
+simics> 
+

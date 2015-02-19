@@ -1,0 +1,4 @@
+script-branch {
+        con0.wait-for-string "Benchmarking ..."
+	stop
+}

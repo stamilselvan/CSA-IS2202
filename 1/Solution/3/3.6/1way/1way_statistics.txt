@@ -1,0 +1,80 @@
+Cache statistics: dc
+-----------------
+    Total number of transactions:     186416494
+
+         Device data reads (DMA):             0
+        Device data writes (DMA):             0
+
+          Uncacheable data reads:             0
+         Uncacheable data writes:             0
+ Uncacheable instruction fetches:             0
+
+          Data read transactions:     158759302
+                Data read misses:       3084810
+             Data read hit ratio:         98.06%
+
+  Instruction fetch transactions:             0
+        Instruction fetch misses:             0
+
+         Data write transactions:      27657192
+               Data write misses:       1782747
+            Data write hit ratio:         93.55%
+
+          Copy back transactions:             0
+
+               Lost Stall Cycles:       1036098
+simics> 
+***************************************
+Cache statistics: lev2c
+-----------------
+    Total number of transactions:     152941811
+
+         Device data reads (DMA):             0
+        Device data writes (DMA):             0
+
+          Uncacheable data reads:             0
+         Uncacheable data writes:             0
+ Uncacheable instruction fetches:             0
+
+          Data read transactions:       3084810
+                Data read misses:         41510
+             Data read hit ratio:         98.65%
+
+  Instruction fetch transactions:     122199809
+        Instruction fetch misses:         23142
+     Instruction fetch hit ratio:         99.98%
+
+         Data write transactions:      27657192
+               Data write misses:         49019
+            Data write hit ratio:         99.82%
+
+          Copy back transactions:         55418
+
+               Lost Stall Cycles:       3751440
+simics> 
+
+***************************************
+Cache statistics: ic
+-----------------
+    Total number of transactions:     125166693
+
+         Device data reads (DMA):             0
+        Device data writes (DMA):             0
+
+          Uncacheable data reads:             0
+         Uncacheable data writes:             0
+ Uncacheable instruction fetches:             0
+
+          Data read transactions:             0
+                Data read misses:             0
+
+  Instruction fetch transactions:     125166693
+        Instruction fetch misses:     122199809
+     Instruction fetch hit ratio:          2.37%
+
+         Data write transactions:             0
+               Data write misses:             0
+
+          Copy back transactions:             0
+
+simics> 
